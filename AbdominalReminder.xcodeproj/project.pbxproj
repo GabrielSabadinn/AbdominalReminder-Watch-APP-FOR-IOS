@@ -1,0 +1,695 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0686A2092EAA85C6001FF9AE /* AbdominalReminder Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0686A2082EAA85C6001FF9AE /* AbdominalReminder Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0686A20A2EAA85C6001FF9AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0686A1FC2EAA85C6001FF9AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0686A2072EAA85C6001FF9AE;
+			remoteInfo = "AbdominalReminder Watch App";
+		};
+		0686A2182EAA85C7001FF9AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0686A1FC2EAA85C6001FF9AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0686A2072EAA85C6001FF9AE;
+			remoteInfo = "AbdominalReminder Watch App";
+		};
+		0686A2222EAA85C7001FF9AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0686A1FC2EAA85C6001FF9AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0686A2072EAA85C6001FF9AE;
+			remoteInfo = "AbdominalReminder Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0686A22E2EAA85C7001FF9AE /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0686A2092EAA85C6001FF9AE /* AbdominalReminder Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0686A2022EAA85C6001FF9AE /* AbdominalReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbdominalReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0686A2082EAA85C6001FF9AE /* AbdominalReminder Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AbdominalReminder Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0686A2172EAA85C7001FF9AE /* AbdominalReminder Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AbdominalReminder Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0686A2212EAA85C7001FF9AE /* AbdominalReminder Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AbdominalReminder Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0686A20C2EAA85C6001FF9AE /* AbdominalReminder Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "AbdominalReminder Watch App";
+			sourceTree = "<group>";
+		};
+		0686A21A2EAA85C7001FF9AE /* AbdominalReminder Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "AbdominalReminder Watch AppTests";
+			sourceTree = "<group>";
+		};
+		0686A2242EAA85C7001FF9AE /* AbdominalReminder Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "AbdominalReminder Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0686A2052EAA85C6001FF9AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0686A2142EAA85C7001FF9AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0686A21E2EAA85C7001FF9AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0686A1FB2EAA85C6001FF9AE = {
+			isa = PBXGroup;
+			children = (
+				0686A20C2EAA85C6001FF9AE /* AbdominalReminder Watch App */,
+				0686A21A2EAA85C7001FF9AE /* AbdominalReminder Watch AppTests */,
+				0686A2242EAA85C7001FF9AE /* AbdominalReminder Watch AppUITests */,
+				0686A2032EAA85C6001FF9AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0686A2032EAA85C6001FF9AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0686A2022EAA85C6001FF9AE /* AbdominalReminder.app */,
+				0686A2082EAA85C6001FF9AE /* AbdominalReminder Watch App.app */,
+				0686A2172EAA85C7001FF9AE /* AbdominalReminder Watch AppTests.xctest */,
+				0686A2212EAA85C7001FF9AE /* AbdominalReminder Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0686A2012EAA85C6001FF9AE /* AbdominalReminder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0686A22F2EAA85C7001FF9AE /* Build configuration list for PBXNativeTarget "AbdominalReminder" */;
+			buildPhases = (
+				0686A2002EAA85C6001FF9AE /* Resources */,
+				0686A22E2EAA85C7001FF9AE /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0686A20B2EAA85C6001FF9AE /* PBXTargetDependency */,
+			);
+			name = AbdominalReminder;
+			packageProductDependencies = (
+			);
+			productName = AbdominalReminder;
+			productReference = 0686A2022EAA85C6001FF9AE /* AbdominalReminder.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		0686A2072EAA85C6001FF9AE /* AbdominalReminder Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0686A22B2EAA85C7001FF9AE /* Build configuration list for PBXNativeTarget "AbdominalReminder Watch App" */;
+			buildPhases = (
+				0686A2042EAA85C6001FF9AE /* Sources */,
+				0686A2052EAA85C6001FF9AE /* Frameworks */,
+				0686A2062EAA85C6001FF9AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0686A20C2EAA85C6001FF9AE /* AbdominalReminder Watch App */,
+			);
+			name = "AbdominalReminder Watch App";
+			packageProductDependencies = (
+			);
+			productName = "AbdominalReminder Watch App";
+			productReference = 0686A2082EAA85C6001FF9AE /* AbdominalReminder Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0686A2162EAA85C7001FF9AE /* AbdominalReminder Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0686A2322EAA85C7001FF9AE /* Build configuration list for PBXNativeTarget "AbdominalReminder Watch AppTests" */;
+			buildPhases = (
+				0686A2132EAA85C7001FF9AE /* Sources */,
+				0686A2142EAA85C7001FF9AE /* Frameworks */,
+				0686A2152EAA85C7001FF9AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0686A2192EAA85C7001FF9AE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0686A21A2EAA85C7001FF9AE /* AbdominalReminder Watch AppTests */,
+			);
+			name = "AbdominalReminder Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "AbdominalReminder Watch AppTests";
+			productReference = 0686A2172EAA85C7001FF9AE /* AbdominalReminder Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0686A2202EAA85C7001FF9AE /* AbdominalReminder Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0686A2352EAA85C7001FF9AE /* Build configuration list for PBXNativeTarget "AbdominalReminder Watch AppUITests" */;
+			buildPhases = (
+				0686A21D2EAA85C7001FF9AE /* Sources */,
+				0686A21E2EAA85C7001FF9AE /* Frameworks */,
+				0686A21F2EAA85C7001FF9AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0686A2232EAA85C7001FF9AE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0686A2242EAA85C7001FF9AE /* AbdominalReminder Watch AppUITests */,
+			);
+			name = "AbdominalReminder Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "AbdominalReminder Watch AppUITests";
+			productReference = 0686A2212EAA85C7001FF9AE /* AbdominalReminder Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0686A1FC2EAA85C6001FF9AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					0686A2012EAA85C6001FF9AE = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					0686A2072EAA85C6001FF9AE = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					0686A2162EAA85C7001FF9AE = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = 0686A2072EAA85C6001FF9AE;
+					};
+					0686A2202EAA85C7001FF9AE = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = 0686A2072EAA85C6001FF9AE;
+					};
+				};
+			};
+			buildConfigurationList = 0686A1FF2EAA85C6001FF9AE /* Build configuration list for PBXProject "AbdominalReminder" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0686A1FB2EAA85C6001FF9AE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0686A2032EAA85C6001FF9AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0686A2012EAA85C6001FF9AE /* AbdominalReminder */,
+				0686A2072EAA85C6001FF9AE /* AbdominalReminder Watch App */,
+				0686A2162EAA85C7001FF9AE /* AbdominalReminder Watch AppTests */,
+				0686A2202EAA85C7001FF9AE /* AbdominalReminder Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0686A2002EAA85C6001FF9AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0686A2062EAA85C6001FF9AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0686A2152EAA85C7001FF9AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0686A21F2EAA85C7001FF9AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0686A2042EAA85C6001FF9AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0686A2132EAA85C7001FF9AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0686A21D2EAA85C7001FF9AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0686A20B2EAA85C6001FF9AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0686A2072EAA85C6001FF9AE /* AbdominalReminder Watch App */;
+			targetProxy = 0686A20A2EAA85C6001FF9AE /* PBXContainerItemProxy */;
+		};
+		0686A2192EAA85C7001FF9AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0686A2072EAA85C6001FF9AE /* AbdominalReminder Watch App */;
+			targetProxy = 0686A2182EAA85C7001FF9AE /* PBXContainerItemProxy */;
+		};
+		0686A2232EAA85C7001FF9AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0686A2072EAA85C6001FF9AE /* AbdominalReminder Watch App */;
+			targetProxy = 0686A2222EAA85C7001FF9AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0686A2292EAA85C7001FF9AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9NH95M2M8W;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0686A22A2EAA85C7001FF9AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9NH95M2M8W;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		0686A22C2EAA85C7001FF9AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9NH95M2M8W;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = AbdominalReminder;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gabi.AbdominalReminder.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		0686A22D2EAA85C7001FF9AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9NH95M2M8W;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = AbdominalReminder;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gabi.AbdominalReminder.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+		0686A2302EAA85C7001FF9AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9NH95M2M8W;
+				INFOPLIST_KEY_CFBundleDisplayName = AbdominalReminder;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gabi.AbdominalReminder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0686A2312EAA85C7001FF9AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9NH95M2M8W;
+				INFOPLIST_KEY_CFBundleDisplayName = AbdominalReminder;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gabi.AbdominalReminder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0686A2332EAA85C7001FF9AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9NH95M2M8W;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gabi.AbdominalReminder-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AbdominalReminder Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AbdominalReminder Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		0686A2342EAA85C7001FF9AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9NH95M2M8W;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gabi.AbdominalReminder-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AbdominalReminder Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AbdominalReminder Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+		0686A2362EAA85C7001FF9AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9NH95M2M8W;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gabi.AbdominalReminder-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "AbdominalReminder Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		0686A2372EAA85C7001FF9AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9NH95M2M8W;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gabi.AbdominalReminder-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "AbdominalReminder Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0686A1FF2EAA85C6001FF9AE /* Build configuration list for PBXProject "AbdominalReminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0686A2292EAA85C7001FF9AE /* Debug */,
+				0686A22A2EAA85C7001FF9AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0686A22B2EAA85C7001FF9AE /* Build configuration list for PBXNativeTarget "AbdominalReminder Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0686A22C2EAA85C7001FF9AE /* Debug */,
+				0686A22D2EAA85C7001FF9AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0686A22F2EAA85C7001FF9AE /* Build configuration list for PBXNativeTarget "AbdominalReminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0686A2302EAA85C7001FF9AE /* Debug */,
+				0686A2312EAA85C7001FF9AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0686A2322EAA85C7001FF9AE /* Build configuration list for PBXNativeTarget "AbdominalReminder Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0686A2332EAA85C7001FF9AE /* Debug */,
+				0686A2342EAA85C7001FF9AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0686A2352EAA85C7001FF9AE /* Build configuration list for PBXNativeTarget "AbdominalReminder Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0686A2362EAA85C7001FF9AE /* Debug */,
+				0686A2372EAA85C7001FF9AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0686A1FC2EAA85C6001FF9AE /* Project object */;
+}
