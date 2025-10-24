@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  AbdominalReminder Watch App
-//
-//  Created by Gabriel Belleboni Sabadin on 23/10/25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -59,6 +52,18 @@ struct ContentView: View {
                 }
                 .buttonStyle(.plain)
             }
+            
+            // Botão de teste de notificação
+            Button(action: {
+                NotificationManager.shared.testNotification(reps: repsPerSession)
+            }) {
+                Image(systemName: "bell.fill")
+                    .font(.system(size: 12))
+                    .foregroundColor(.white.opacity(0.7))
+                    .frame(width: 36, height: 36)
+                    .background(Circle().fill(Color.green.opacity(0.7)))
+            }
+            .buttonStyle(.plain)
             
             // Botão de configurações
             Button(action: {

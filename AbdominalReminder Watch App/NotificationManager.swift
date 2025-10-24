@@ -1,10 +1,3 @@
-//
-//  NotificationManager.swift
-//  AbdominalReminder Watch App
-//
-//  Created by Gabriel Belleboni Sabadin on 23/10/25.
-//
-
 import UserNotifications
 
 class NotificationManager {
@@ -26,19 +19,48 @@ class NotificationManager {
         content.sound = .default
         content.categoryIdentifier = "ABDOMINAL_REMINDER"
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval * 3600, repeats: true)
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        let timeInterval = max(60, interval * 3600) // Mínimo 60s para evitar problemas
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: true)
+        
+        let identifier = "AbdominalReminderRecurring"
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
+        
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request) { error in
             if let error = error {
                 print("Erro ao agendar notificação: \(error)")
+            } else {
+                print("Notificação agendada a cada \(timeInterval/3600) horas")
             }
         }
         
-        let doAction = UNNotificationAction(identifier: "DO", title: "Fazer agora", options: [])
+        let doAction = UNNotificationAction(identifier: "DO", title: "Fazer agora", options: [.foreground])
         let deferAction = UNNotificationAction(identifier: "DEFER", title: "Adiar 10 min", options: [])
         let category = UNNotificationCategory(identifier: "ABDOMINAL_REMINDER", actions: [doAction, deferAction], intentIdentifiers: [], options: [])
         UNUserNotificationCenter.current().setNotificationCategories([category])
+    }
+    
+    func testNotification(reps: Int) {
+        let content = UNMutableNotificationContent()
+        content.title = "Teste de Notificação"
+        content.body = "Faça \(reps) abdominais (teste)."
+        content.sound = .default
+        content.categoryIdentifier = "ABDOMINAL_REMINDER"
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false) // 5 segundos
+        let identifier = "TestAbdominalReminder"
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
+        
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Erro ao agendar notificação de teste: \(error)")
+            } else {
+                print("Notificação de teste agendada")
+            }
+        }
     }
     
     func deferNotification() {
@@ -49,12 +71,19 @@ class NotificationManager {
         content.categoryIdentifier = "ABDOMINAL_REMINDER"
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 600, repeats: false)
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        let identifier = "DeferredAbdominalReminder"
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
         
-        UNUserNotificationCenter.current().add(request)
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Erro ao agendar notificação adiada: \(error)")
+            }
+        }
     }
     
     func clearNotifications() {
-        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["AbdominalReminderRecurring", "DeferredAbdominalReminder", "TestAbdominalReminder"])
     }
 }
