@@ -17,12 +17,6 @@ class AbdominalReminderAppDelegate: NSObject, WKApplicationDelegate {
         super.init()
         UNUserNotificationCenter.current().delegate = NotificationDelegate.shared
         NotificationManager.shared.requestAuthorization()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            let interval = WorkoutData.getInterval()
-            let reps = WorkoutData.getRepsPerSession()
-            NotificationManager.shared.clearNotifications()
-            NotificationManager.shared.scheduleNotification(interval: interval, reps: reps)
-        }
+  
     }
 }

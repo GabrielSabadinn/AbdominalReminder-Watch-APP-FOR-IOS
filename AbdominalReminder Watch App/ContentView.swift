@@ -85,7 +85,10 @@ struct ContentView: View {
                 WorkoutData.resetDailyReps()
                 repsToday = 0
             }
-            
+            let interval = WorkoutData.getInterval()
+    let reps = WorkoutData.getRepsPerSession()
+    NotificationManager.shared.clearNotifications()
+    NotificationManager.shared.scheduleNotification(interval: interval, reps: reps)
             NotificationCenter.default.addObserver(
                 forName: .init("WorkoutDataUpdated"),
                 object: nil,
@@ -107,108 +110,79 @@ struct SettingsView: View {
     @State private var interval: Double = WorkoutData.getInterval()
     @State private var repsPerSession = WorkoutData.getRepsPerSession()
     @Environment(\.dismiss) private var dismiss
-    
+
     var body: some View {
-        NavigationView {
-            ScrollView {
-                VStack(spacing: 12) {
-                    // Título
-                    Text("Configurações")
-                        .font(.system(size: 14, weight: .semibold, design: .rounded))
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .padding(.bottom, 4)
-                    
-                    // Picker para intervalo
-                    VStack(spacing: 4) {
-                        Text("Intervalo de Lembrete")
-                            .font(.system(size: 11, weight: .medium))
-                            .foregroundColor(.white.opacity(0.8))
-                        
-                        Picker("", selection: $interval) {
-                            Text("1 hora").tag(1.0)
-                            Text("2 horas").tag(2.0)
-                            Text("3 horas").tag(3.0)
-                            Text("4 horas").tag(4.0)
-                            Text("6 horas").tag(6.0)
-                        }
-                        .pickerStyle(.wheel)
-                        .frame(height: 40)
-                        .background(Color.gray.opacity(0.15))
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.cyan.opacity(0.3), lineWidth: 1)
-                        )
-                    }
-                    .padding(.horizontal, 6)
-                    
-                    // Picker para repetições
-                    VStack(spacing: 4) {
-                        Text("Repetições por Sessão")
-                            .font(.system(size: 11, weight: .medium))
-                            .foregroundColor(.white.opacity(0.8))
-                        
-                        Picker("", selection: $repsPerSession) {
-                            ForEach([10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 150, 200], id: \.self) { reps in
-                                Text("\(reps) reps").tag(reps)
-                            }
-                        }
-                        .pickerStyle(.wheel)
-                        .frame(height: 40)
-                        .background(Color.gray.opacity(0.15))
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.cyan.opacity(0.3), lineWidth: 1)
-                        )
-                    }
-                    .padding(.horizontal, 6)
-                    
-                    // Botões
-                    HStack(spacing: 8) {
-                        Button(action: {
-                            WorkoutData.saveInterval(interval)
-                            WorkoutData.saveRepsPerSession(repsPerSession)
-                            NotificationManager.shared.clearNotifications()
-                            NotificationManager.shared.scheduleNotification(
-                                interval: interval,
-                                reps: repsPerSession
-                            )
-                            dismiss()
-                        }) {
-                            HStack {
-                                Image(systemName: "checkmark.circle.fill")
-                                Text("Salvar")
-                            }
-                            .font(.system(size: 11, weight: .medium))
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 10)
-                            .padding(.vertical, 6)
-                            .background(Color.blue.opacity(0.7))
-                            .clipShape(RoundedRectangle(cornerRadius: 6))
-                        }
-                        .buttonStyle(.plain)
+        VStack(spacing: 16) {
+            Text("Configurações")
+                .font(.system(size: 14, weight: .semibold))
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity)
+                .padding(.top, 8)
+
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Intervalo de Lembrete")
+                    .font(.system(size: 11))
+                    .foregroundColor(.white.opacity(0.8))
+
+                Picker("", selection: $interval) {
+                    ForEach([1,2,3,4,6], id: \.self) { h in
+                        Text("\(h) hora\(h > 1 ? "s" : "")").tag(Double(h))
                     }
                 }
-                .padding(.vertical, 8)
-                .padding(.horizontal, 6)
+                .pickerStyle(.wheel)
+                .frame(height: 60)
             }
-            .background(Color.black.opacity(0.95))
-            .navigationTitle("Config.")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button(action: { dismiss() }) {
-                        Image(systemName: "xmark.circle.fill")
-                            .font(.system(size: 11))
-                            .foregroundColor(.gray.opacity(0.7))
+
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Repetições por Sessão")
+                    .font(.system(size: 11))
+                    .foregroundColor(.white.opacity(0.8))
+
+                Picker("", selection: $repsPerSession) {
+                    ForEach([10,15,20,25,30,35,40,45,50,60,70,80,90,100,150,200], id: \.self) { reps in
+                        Text("\(reps) reps").tag(reps)
                     }
                 }
+                .pickerStyle(.wheel)
+                .frame(height: 60)
             }
+
+            HStack {
+                Button("Cancelar") { dismiss() }
+                    .font(.system(size: 11))
+                    .foregroundColor(.gray)
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 6)
+                    .background(Color.gray.opacity(0.3))
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+
+                Button("Salvar") {
+                    WorkoutData.saveInterval(interval)
+                    WorkoutData.saveRepsPerSession(repsPerSession)
+                    NotificationManager.shared.clearNotifications()
+                    NotificationManager.shared.scheduleNotification(interval: interval, reps: repsPerSession)
+                    NotificationCenter.default.post(name: .init("WorkoutDataUpdated"), object: nil)
+                    dismiss()
+                }
+                .font(.system(size: 11, weight: .medium))
+                .foregroundColor(.white)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 6)
+                .background(Color.blue.opacity(0.7))
+                .clipShape(RoundedRectangle(cornerRadius: 6))
+            }
+            .padding(.top, 8)
+
+            Spacer()
         }
+        .padding(.horizontal, 8)
+        .background(Color.black.opacity(0.95))
+        // SEM .onTapGesture
     }
 }
+
+
+
 
 #Preview {
     ContentView()
