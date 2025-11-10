@@ -19,25 +19,30 @@ class NotificationManager {
         content.sound = .default
         content.categoryIdentifier = "ABDOMINAL_REMINDER"
         
-        let timeInterval = max(60, interval * 3600) // Mínimo 60s para evitar problemas
+        let timeInterval = max(60, interval * 3600)
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: true)
-        
         let identifier = "AbdominalReminderRecurring"
-        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
+        
+        // LIMPEZA TOTAL (resolve duplicatas)
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        
         UNUserNotificationCenter.current().add(request) { error in
             if let error = error {
-                print("Erro ao agendar notificação: \(error)")
+                print("Erro ao agendar: \(error)")
             } else {
-                print("Notificação agendada a cada \(timeInterval/3600) horas")
+                print("✅ Notificação agendada: \(reps) reps a cada \(interval)h")
             }
         }
         
+        // Recria categoria
         let doAction = UNNotificationAction(identifier: "DO", title: "Fazer agora", options: [.foreground])
         let deferAction = UNNotificationAction(identifier: "DEFER", title: "Adiar 10 min", options: [])
-        let category = UNNotificationCategory(identifier: "ABDOMINAL_REMINDER", actions: [doAction, deferAction], intentIdentifiers: [], options: [])
+        let category = UNNotificationCategory(identifier: "ABDOMINAL_REMINDER",
+                                            actions: [doAction, deferAction],
+                                            intentIdentifiers: [],
+                                            options: [])
         UNUserNotificationCenter.current().setNotificationCategories([category])
     }
     
@@ -48,18 +53,14 @@ class NotificationManager {
         content.sound = .default
         content.categoryIdentifier = "ABDOMINAL_REMINDER"
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false) // 5 segundos
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         let identifier = "TestAbdominalReminder"
-        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
         
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request) { error in
-            if let error = error {
-                print("Erro ao agendar notificação de teste: \(error)")
-            } else {
-                print("Notificação de teste agendada")
-            }
+            error == nil ? print("Notificação de teste OK") : print("Erro teste: \(error!)")
         }
     }
     
@@ -68,22 +69,17 @@ class NotificationManager {
         content.title = "Lembrete adiado"
         content.body = "Próximo lembrete em 10 minutos."
         content.sound = .default
-        content.categoryIdentifier = "ABDOMINAL_REMINDER"
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 600, repeats: false)
         let identifier = "DeferredAbdominalReminder"
+        
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
-        
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        
-        UNUserNotificationCenter.current().add(request) { error in
-            if let error = error {
-                print("Erro ao agendar notificação adiada: \(error)")
-            }
-        }
+        UNUserNotificationCenter.current().add(request)
     }
     
     func clearNotifications() {
-        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["AbdominalReminderRecurring", "DeferredAbdominalReminder", "TestAbdominalReminder"])
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
     }
 }

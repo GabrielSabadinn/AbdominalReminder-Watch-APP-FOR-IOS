@@ -1,10 +1,3 @@
-//
-//  NotificationDelegate.swift
-//  AbdominalReminder Watch App
-//
-//  Created by Gabriel Belleboni Sabadin on 23/10/25.
-//
-
 import UserNotifications
 
 class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
@@ -12,8 +5,12 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
     private override init() {}
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("🔔 Ação recebida: \(response.actionIdentifier)")
+        
         if response.actionIdentifier == "DO" {
-            WorkoutData.addReps(WorkoutData.getRepsPerSession())
+            let reps = WorkoutData.getRepsPerSession()
+            print("💪 Adicionando \(reps) reps")
+            WorkoutData.addReps(reps)
         } else if response.actionIdentifier == "DEFER" {
             NotificationManager.shared.deferNotification()
         }

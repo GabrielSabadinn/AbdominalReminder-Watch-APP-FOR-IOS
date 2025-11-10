@@ -8,12 +8,10 @@ struct ContentView: View {
     
     var body: some View {
         VStack(spacing: 8) {
-            // Título
             Text("Abdominais")
                 .font(.system(size: 14, weight: .semibold, design: .rounded))
                 .foregroundColor(.white.opacity(0.9))
             
-            // Contador
             Text("\(repsToday)")
                 .font(.system(size: 28, weight: .bold, design: .rounded))
                 .foregroundColor(.cyan)
@@ -24,9 +22,7 @@ struct ContentView: View {
             
             Spacer()
             
-            // Botões
             HStack(spacing: 10) {
-                // Botão para adicionar repetições
                 Button(action: {
                     WorkoutData.addReps(repsPerSession)
                     repsToday = WorkoutData.getDailyReps()
@@ -39,7 +35,6 @@ struct ContentView: View {
                 }
                 .buttonStyle(.plain)
                 
-                // Botão para zerar contagem
                 Button(action: {
                     WorkoutData.resetDailyReps()
                     repsToday = 0
@@ -53,7 +48,6 @@ struct ContentView: View {
                 .buttonStyle(.plain)
             }
             
-            // Botão de teste de notificação
             Button(action: {
                 NotificationManager.shared.testNotification(reps: repsPerSession)
             }) {
@@ -65,10 +59,7 @@ struct ContentView: View {
             }
             .buttonStyle(.plain)
             
-            // Botão de configurações
-            Button(action: {
-                showingSettings = true
-            }) {
+            Button(action: { showingSettings = true }) {
                 Image(systemName: "gearshape.fill")
                     .font(.system(size: 12))
                     .foregroundColor(.white.opacity(0.7))
@@ -85,16 +76,23 @@ struct ContentView: View {
                 WorkoutData.resetDailyReps()
                 repsToday = 0
             }
-            let interval = WorkoutData.getInterval()
-    let reps = WorkoutData.getRepsPerSession()
-    NotificationManager.shared.clearNotifications()
-    NotificationManager.shared.scheduleNotification(interval: interval, reps: reps)
-            NotificationCenter.default.addObserver(
-                forName: .init("WorkoutDataUpdated"),
-                object: nil,
-                queue: .main
-            ) { _ in
+            
+            interval = WorkoutData.getInterval()
+            repsPerSession = WorkoutData.getRepsPerSession()
+            repsToday = WorkoutData.getDailyReps()
+            
+            NotificationManager.shared.clearNotifications()
+            NotificationManager.shared.scheduleNotification(interval: interval, reps: repsPerSession)
+        }
+        // ← AQUI É O QUE RESOLVE O PROBLEMA DE ATUALIZAÇÃO AO VOLTAR DAS CONFIGS
+        .onChange(of: showingSettings) { newValue in
+            if !newValue { // quando a sheet fecha
+                interval = WorkoutData.getInterval()
+                repsPerSession = WorkoutData.getRepsPerSession()
                 repsToday = WorkoutData.getDailyReps()
+                
+                NotificationManager.shared.clearNotifications()
+                NotificationManager.shared.scheduleNotification(interval: interval, reps: repsPerSession)
             }
         }
         .sheet(isPresented: $showingSettings) {
@@ -177,12 +175,8 @@ struct SettingsView: View {
         }
         .padding(.horizontal, 8)
         .background(Color.black.opacity(0.95))
-        // SEM .onTapGesture
     }
 }
-
-
-
 
 #Preview {
     ContentView()

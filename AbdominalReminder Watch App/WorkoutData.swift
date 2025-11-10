@@ -1,10 +1,3 @@
-//
-//  WorkoutData.swift
-//  AbdominalReminder Watch App
-//
-//  Created by Gabriel Belleboni Sabadin on 23/10/25.
-//
-
 import Foundation
 
 struct WorkoutData {
